@@ -1,0 +1,50 @@
+<!-- Partial for loading a single new restaurant page -->
+
+<div class="container">
+
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{{restaurantsDB[0].image}}" alt="" />
+      </div>
+        <div class="col-md-6">
+            <br>
+            <p>{{restaurantsDB[0].cuisine}} Cuisine</p>
+            <p>Located in {{restaurantsDB[0].city}},
+              {{restaurantsDB[0].state}}</p>
+            <p>{{restaurantsDB[0].description}}</p>
+            <p>Rating:
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+            </p>
+
+            <a href="/edit/{{restaurantsDB[0].id}}"><button type="button" name="button" class="btn-success">Edit</button></a>
+            <form action="/restaurants/{{restaurantsDB[0].id}}/delete" method="post">
+                <button type="submit" name="button" class="btn-danger">Delete</button>
+            </form>
+            <a href="/restaurants/{{restaurantsDB[0].id}}/reviews"><button type="button" name="button" class="btn-primary">Add Review</button></a>
+        </div>
+        
+    </div><br><hr>
+        
+    {% for review in reviews %}
+
+        {% if !review.review %}
+	       <p>Be the first to review this page!</p> 
+        {% else %}
+            <div class="row">
+                <div class="col-md-12">
+                    <p>{{review.customername}}</p>
+                    <p>{{review.review}}</p>
+                    <p>{{review.creationdate|date('Y-m-d')}}</p>
+                </div> 
+            </div>
+            <hr>
+        {% endif %}
+
+    {%endfor%}
+
+
+  </div>
