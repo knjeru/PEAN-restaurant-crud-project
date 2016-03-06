@@ -1,5 +1,7 @@
 # gTables
 
+This is a variation of the restaurant CRUD project that implements AngularJS
+
 Over the course of Unit 2, you will be adding to this project every week for the next month with all the skills you learn during the week. Please read each part carefully so you can properly build your project with an end goal in mind!
 
 
