@@ -1,0 +1,27 @@
+<!-- Homepage Partial for All restaurants  -->
+
+  <div class="container">
+      
+    <div class="row">
+        <!-- Replace this SWIG for loop with angular ngRepeat -->
+        {% for restaurantsDB in restaurantsDB %}
+          <div class="col-md-4 restaurantThumbs" ng-repeat="restaurants in restaurantsDB">
+              <a href="/restaurants/{{restaurants.id}}">
+                <h5>{{restaurantsDB.name}}</h5>
+                <img src="{{restaurants.image}}" alt=""/>
+              </a>
+              <br>
+              <p>{{restaurants.cuisine}} Cuisine</p>
+              <p>{{restaurants.city}}, {{restaurants.state}}
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </p>
+
+          </div>
+        {% endfor %}
+
+    </div>
+  </div>
