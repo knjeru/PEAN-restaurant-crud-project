@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block title %}{% endblock %}
+
+
+{% block content %}
+
+  <div class="container">
+      
+    <div class="row">
+        {% for restaurantsDB in restaurantsDB %}
+          <div class="col-md-4 restaurantThumbs">
+              <a href="/restaurants/{{restaurantsDB.id}}">
+                <h5>{{restaurantsDB.name}}</h5>
+                <img src="{{restaurantsDB.image}}" alt=""/>
+              </a>
+              <br>
+              <p>{{restaurantsDB.cuisine}} Cuisine</p>
+              <p>{{restaurantsDB.city}}, {{restaurantsDB.state}}
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+                <span class="glyphicon glyphicon-star" aria-hidden="true"></span>
+              </p>
+
+          </div>
+        {% endfor %}
+
+    </div>
+  </div>
+{% endblock %}

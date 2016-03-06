@@ -1,0 +1,90 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+* {
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+/*a {
+  color: #00B7FF;
+}*/
+
+a:hover {
+  text-decoration: none;
+}
+
+/* centered columns styles */
+
+.row-centered {
+  text-align: center;
+}
+.col-centered {
+  display: inline-block;
+  float: none;
+  /* reset the text-align */
+  text-align: left;
+  /* inline-block space fix */
+  margin-right: -4px;
+}
+div.row {
+  padding-left: 15%;
+}
+div.restaurantThumbs {
+  border: 1px solid black;
+  margin-left: 5px;
+  margin-bottom: 5px;
+  height: 300px;
+  width: 300px;
+  background-color: #E1E1E1;
+}
+nav.navbar {
+  background-color: #7EC479;
+  text-align: center;
+}
+img {
+  width: 75%;
+  height: 60%;
+}
+button {
+  margin-left: 10px;
+  color: black;
+  font-size: 16px;
+  border: none;
+  padding: 5px 15px;
+  letter-spacing: 2px;
+  border-radius: 4px;
+}
+#editbtn {
+  background: #7FC378;
+}
+#deletebtn {
+  background: #F06C53;
+}
+input[type=radio] {
+  margin-left: 5px;
+}
+
+/* Form styles */
+fieldset {
+  display: block;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-top: 0.35em;
+  padding-bottom: 0.625em;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  border: 1px groove black;
+}
+legend {
+  width: auto;
+  border-bottom: 0px;
+}
+
+#submitbtn {
+  background: #7FC378;
+}
+#cancelbtn {
+  background: #F06C53;
+}
